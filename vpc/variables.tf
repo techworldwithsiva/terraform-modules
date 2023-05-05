@@ -1,7 +1,18 @@
-# variable "cidr" {
-#   type = string
-#   default = "10.0.0.0/16"
-# }
+variable "cidr" {
+  type = string
+}
+
+variable "public_subnet_cidr" {
+  type = list
+}
+
+variable "private_subnet_cidr" {
+  type = list
+}
+
+variable "database_subnet_cidr" {
+  type = list
+}
 
 variable "tags" {
   type = map
@@ -58,3 +69,4 @@ variable "database_subnet_tags" {
     Name = "database-subnet"
   }
 }
+
